@@ -1,0 +1,13 @@
+type Job = 
+ record {
+   comp: text;
+   desc: text;
+   location: text;
+   skills: text;
+   title: text;
+ };
+service : {
+  createJob: (text, text, text, text, text) -> () oneway;
+  readJobs: () -> (vec Job) query;
+  removeJob: (nat) -> () oneway;
+}
